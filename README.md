@@ -36,24 +36,15 @@ Pre-trained models, benckmark scores, and pre-computed results reproduced by thi
 
         [datasets/DAVIS](datasets/DAVIS): [TrainVal](https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-trainval-480p.zip) (480p) contains both the training and validation split. [Test-Dev](https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-test-dev-480p.zip) (480p) contains the Test-dev split. The [full-resolution version](https://davischallenge.org/davis2017/code.html) is also supported for training and evaluation but not required.
 2. Download models:
-    * **Static**    
+    Download https://drive.google.com/file/d/1jQ42MVhaX2oUJdYIdMeiAQXgmu3Kt5TJ/view?usp=sharing and put it into folder 'pretrain_models', Download https://drive.google.com/file/d/1o9JXgyDg7xBzlkAZARXSWPPVAqiHx15I/view?usp=sharing and put it into folder 'pretrain_models', Download https://drive.google.com/file/d/1wfuD4Q73E3N4fmiisYoLwKOUQexCxc_4/view?usp=sharing and put it into folder 'pretrain_models'
 3. Evaluation
     * **cycle**   
-
+    python tools/eval.py --exp_name aott_cycle --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --ensemble pretrain_models/AOTT_cycle.pth
     * **cycle+gc**   
-
-## Adding your own dataset
-Coming
-
-## Troubleshooting
-Waiting
+    python tools/eval.py --exp_name aott_cycle_gc --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --ensemble pretrain_models/AOTT_cycle.pth --gc
 
 ## TODO
-- [ ] Code documentation
-- [ ] Adding your own dataset
-- [ ] Results with test-time augmentations in Model Zoo
-- [ ] Support gradient accumulation
-- [x] Demo tool
+- [x] Training cycle
 
 ## Citations
 Please consider citing the related paper(s) in your publications if it helps your research.
