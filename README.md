@@ -64,13 +64,13 @@ Please consider citing the related paper(s) in your publications if it helps you
   booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2021}
 }
-@article{li2020delving,
-  title={Delving into the cyclic mechanism in semi-supervised video object segmentation},
-  author={Li, Yuxi and Xu, Ning and Peng, Jinlong and See, John and Lin, Weiyao},
-  journal={Advances in Neural Information Processing Systems},
-  volume={33},
-  pages={1218--1228},
-  year={2020}
+@article{li2022exploring,
+  title={Exploring the Semi-Supervised Video Object Segmentation Problem from a Cyclic Perspective},
+  author={Li, Yuxi and Xu, Ning and Yang, Wenjie and See, John and Lin, Weiyao},
+  journal={International Journal of Computer Vision},
+  pages={1--17},
+  year={2022},
+  publisher={Springer}
 }
 ```
 
