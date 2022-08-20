@@ -39,10 +39,13 @@ Pre-trained models, benckmark scores, and pre-computed results reproduced by thi
     Download https://drive.google.com/file/d/1jQ42MVhaX2oUJdYIdMeiAQXgmu3Kt5TJ/view?usp=sharing and put it into folder 'pretrain_models', Download https://drive.google.com/file/d/1o9JXgyDg7xBzlkAZARXSWPPVAqiHx15I/view?usp=sharing and put it into folder 'pretrain_models', Download https://drive.google.com/file/d/1wfuD4Q73E3N4fmiisYoLwKOUQexCxc_4/view?usp=sharing and put it into folder 'pretrain_models'
 3. Evaluation
     * **cycle**   
+    '''bash
     python tools/eval.py --exp_name aott_cycle --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --ensemble pretrain_models/AOTT_cycle.pth
-    * **cycle+gc**   
+    '''
+    * **cycle+gc** 
+    * bash'''  
     python tools/eval.py --exp_name aott_cycle_gc --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --ensemble pretrain_models/AOTT_cycle.pth --gc
-
+    '''
 ## TODO
 - [x] Training cycle
 
