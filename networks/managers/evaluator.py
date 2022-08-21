@@ -435,17 +435,17 @@ class Evaluator(object):
                                         current_prob,
                                         size=engine.input_size_2d,
                                         mode="nearest")
-                                    if self.gc:
-                                        if frame_idx<10:
-                                         with TemporaryGrad():
-                                          for i in range(10):
-                                            tmp=current_prob.detach()
-                                            tmp.requires_grad=True
-                                            gc_engine.add_reference_frame(current_img,tmp,frame_idx,obj_nums)
-                                            loss=gc_engine.gc()
-                                            print(loss)
-                                            loss.backward(retain_graph=True)
-                                            current_prob=current_prob-1000*tmp.grad
+                                    if self.gc and frame_idx<10 and obj_nums<5:
+                                        
+                                        with TemporaryGrad():
+                                            for i in range(10):
+                                                tmp=current_prob.detach()
+                                                tmp.requires_grad=True
+                                                gc_engine.add_reference_frame(current_img,tmp,frame_idx,obj_nums)
+                                                loss=gc_engine.gc()
+                                                print(loss)
+                                                loss.backward(retain_graph=True)
+                                                current_prob=current_prob-1000*tmp.grad
                                     
                                     
                                     current_prob = torch.argmax(current_prob, dim=1)
