@@ -40,11 +40,11 @@ Pre-trained models, benckmark scores, and pre-computed results reproduced by thi
 3. Evaluation
     * **cycle**   
     ```bash
-    python tools/eval.py --exp_name aott_cycle --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --ensemble pretrain_models/AOTT_cycle.pth
+    python tools/eval.py --exp_name aott_cycle --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --cycle pretrain_models/AOTT_cycle.pth
     ```
     * **cycle+gc** 
     ```bash
-    python tools/eval.py --exp_name aott_cycle_gc --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --ensemble pretrain_models/AOTT_cycle.pth --gc
+    python tools/eval.py --exp_name aott_cycle_gc --model aott --dataset davis2017 --split val --gpu_num 1 --ckpt_path pretrain_models/AOTT.pth --cycle pretrain_models/AOTT_cycle.pth --gc
     ```
 ## TODO
 - [x] Training cycle
