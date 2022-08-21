@@ -435,7 +435,7 @@ class Evaluator(object):
                                         current_prob,
                                         size=engine.input_size_2d,
                                         mode="nearest")
-                                    if self.gc and frame_idx<10 and obj_nums[0]<5:
+                                    if self.gc and frame_idx<12:
                                         
                                         with TemporaryGrad():
                                             for i in range(10):
