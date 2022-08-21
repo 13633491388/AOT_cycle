@@ -36,7 +36,7 @@ def main():
     parser.add_argument('--gpu_num', type=int, default=1)
 
     parser.add_argument('--ckpt_path', type=str, default='')
-    parser.add_argument('--ensemble', type=str, default='')
+    parser.add_argument('--cycle', type=str, default='')
     
     parser.add_argument('--ckpt_step', type=int, default=-1)
 
@@ -70,8 +70,8 @@ def main():
         cfg.TEST_CKPT_PATH = args.ckpt_path
     if args.ckpt_step > 0:
         cfg.TEST_CKPT_STEP = args.ckpt_step
-    if args.ensemble:
-        cfg.TEST_ENSEMBLE = args.ensemble
+    if args.cycle:
+        cfg.TEST_ENSEMBLE = args.cycle
     if args.gc:
         cfg.GC=args.gc
     if args.dataset != '':
