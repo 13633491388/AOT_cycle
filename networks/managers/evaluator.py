@@ -443,8 +443,9 @@ class Evaluator(object):
                                             tmp.requires_grad=True
                                             gc_engine.add_reference_frame(current_img,tmp,frame_idx,obj_nums)
                                             loss=gc_engine.gc()
+                                            print(loss)
                                             loss.backward(retain_graph=True)
-                                            current_prob=current_prob-10000*tmp.grad
+                                            current_prob=current_prob-1000*tmp.grad
                                     
                                     
                                     current_prob = torch.argmax(current_prob, dim=1)
